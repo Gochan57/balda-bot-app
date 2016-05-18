@@ -1,6 +1,6 @@
-package ru.goshyulya.telegram.bot.balda.vocabulary.model;
+package ru.goshyulya.telegram.bot.balda.dictionary.model;
 
-import ru.goshyulya.telegram.bot.balda.vocabulary.load.Loader;
+import ru.goshyulya.telegram.bot.balda.dictionary.load.Loader;
 
 import java.util.List;
 

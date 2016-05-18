@@ -1,14 +1,6 @@
 package ru.goshyulya.telegram.bot.balda.logic;
 
 
-import ru.goshyulya.telegram.bot.balda.desc.Desc;
-import ru.goshyulya.telegram.bot.balda.desc.Field;
-import ru.goshyulya.telegram.bot.balda.move.Step;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * Created by Gochan on 18.05.2016.
  */

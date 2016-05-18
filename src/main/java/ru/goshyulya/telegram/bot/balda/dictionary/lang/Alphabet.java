@@ -1,4 +1,4 @@
-package ru.goshyulya.telegram.bot.balda.vocabulary.lang;
+package ru.goshyulya.telegram.bot.balda.dictionary.lang;
 
 /**
  * Created by Gochan on 17.05.2016.

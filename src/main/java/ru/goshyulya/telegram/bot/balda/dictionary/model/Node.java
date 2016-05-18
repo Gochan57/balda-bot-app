@@ -1,6 +1,6 @@
-package ru.goshyulya.telegram.bot.balda.vocabulary.model;
+package ru.goshyulya.telegram.bot.balda.dictionary.model;
 
-import ru.goshyulya.telegram.bot.balda.vocabulary.lang.Alphabet;
+import ru.goshyulya.telegram.bot.balda.dictionary.lang.Alphabet;
 
 /**
  * Created by Gochan on 16.05.2016.

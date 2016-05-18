@@ -1,7 +1,8 @@
-package ru.goshyulya.telegram.bot.balda.vocabulary.load;
+package ru.goshyulya.telegram.bot.balda.dictionary.load;
 
-import ru.goshyulya.telegram.bot.balda.vocabulary.model.Tree;
-import ru.goshyulya.telegram.bot.balda.vocabulary.model.Node;
+
+import ru.goshyulya.telegram.bot.balda.dictionary.model.Node;
+import ru.goshyulya.telegram.bot.balda.dictionary.model.Tree;
 
 import java.io.*;
 import java.util.Arrays;
@@ -11,13 +12,13 @@ import java.util.Collection;
  * Created by Gochan on 16.05.2016.
  */
 public class Loader {
-    public static void loadTreeFromCollectionOfWords(Tree tree, Collection<String> words){
+    public static void loadTreeFromCollectionOfWords(ru.goshyulya.telegram.bot.balda.dictionary.model.Tree tree, Collection<String> words){
         for(String word : words){
             loadWord(tree, word);
         }
     }
 
-    public static void loadTreeFromFile(Tree tree, File file) throws IOException{
+    public static void loadTreeFromFile(ru.goshyulya.telegram.bot.balda.dictionary.model.Tree tree, File file) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
         while((line=br.readLine())!=null){
@@ -38,7 +39,7 @@ public class Loader {
             return;
         }
         char c = chars[0];
-        Node nextNode = node.getNext(c);
+        ru.goshyulya.telegram.bot.balda.dictionary.model.Node nextNode = node.getNext(c);
         if(nextNode == null){
             nextNode = new Node(c, chars.length==1);
             node.addNext(nextNode);
