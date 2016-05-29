@@ -1,4 +1,6 @@
-package ru.goshyulya.telegram.bot.balda.move;
+package ru.goshyulya.telegram.bot.balda.model.move;
+
+import ru.goshyulya.telegram.bot.balda.model.board.Field;
 
 /**
  * Created by Gochan on 18.05.2016.
@@ -14,6 +16,10 @@ public class Step implements Comparable<Step> {
         this.y = y;
         this.letter = letter;
         this.score = score;
+    }
+
+    public Step(Field field, Integer score){
+        this(field.getX(), field.getY(), field.getCharacter(), score);
     }
 
     public int getX() {
