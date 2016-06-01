@@ -14,6 +14,10 @@ public class Chain {
         fields = new LinkedList<FieldInChain>();
     }
 
+    public Chain(Chain chain){
+        setFields(chain.getFields());
+    }
+
     public void append(Field field){
         FieldInChain newField;
         if(fields.size() != 0){
@@ -24,6 +28,10 @@ public class Chain {
             newField = new FieldInChain(field, null, null);
         }
         fields.add(newField);
+    }
+
+    public void removeLast(){
+        fields.removeLast();
     }
 
     public boolean containsField(Field field){
@@ -56,6 +64,23 @@ public class Chain {
             reversedChain.append(newField);
         }
         return reversedChain;
+    }
+
+    public LinkedList<FieldInChain> getFields() {
+        return fields;
+    }
+
+    public void setFields(LinkedList<FieldInChain> fields) {
+        this.fields = fields;
+    }
+
+    @Override
+    public String toString(){
+        StringBuffer str = new StringBuffer("");
+        for(Field field : fields){
+            str.append(field.getCharacter());
+        }
+        return str.toString();
     }
 
     public class FieldInChain extends Field{

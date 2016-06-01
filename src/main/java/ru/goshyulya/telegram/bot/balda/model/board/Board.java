@@ -78,11 +78,13 @@ public class Board implements Iterable<Field> {
                     throw new IndexOutOfBoundsException("No more fields on the board");
                 }
                 if(x != SIZE-1){
-                    return fields[x+1][y];
+                    x++;
                 }
                 else {
-                    return fields[0][y+1];
+                    x=0;
+                    y++;
                 }
+                return fields[x][y];
             }
         };
     }

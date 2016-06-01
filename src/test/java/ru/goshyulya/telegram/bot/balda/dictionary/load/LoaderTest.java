@@ -1,7 +1,7 @@
 package ru.goshyulya.telegram.bot.balda.dictionary.load;
 
 import org.junit.Test;
-import ru.goshyulya.telegram.bot.balda.dictionary.model.Tree;
+import ru.goshyulya.telegram.bot.balda.dictionary.model.Dict;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,19 +16,19 @@ public class LoaderTest {
     @Test
     public void testLoadTreeFromListOfWords() throws Exception {
         List voc = Arrays.asList("папка", "папа", "мама", "мамонт");
-        Tree tree = new Tree();
-        Loader.loadTreeFromCollectionOfWords(tree, voc);
+        Dict dict = new Dict();
+        Loader.loadDictFromCollectionOfWords(dict, voc);
 
-        tree.getRoot().getNext('м').getNext('а').getNext('м').getNext('а');
+        dict.getRoot().getNext('м').getNext('а').getNext('м').getNext('а');
     }
 
     @Test
     public void testLoadTreeFromFile() throws IOException {
         File file = new File(Thread.currentThread().getContextClassLoader().getResource("words.txt").getFile());
-        Tree tree = new Tree();
-        Loader.loadTreeFromFile(tree, file);
+        Dict dict = new Dict();
+        Loader.loadDictFromFile(dict, file);
 
-        tree.getRoot().getNext('м').getNext('а').getNext('м').getNext('а');
+        dict.getRoot().getNext('м').getNext('а').getNext('м').getNext('а');
     }
 
 //    @Test

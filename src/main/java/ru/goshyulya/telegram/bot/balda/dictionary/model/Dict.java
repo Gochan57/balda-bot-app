@@ -7,19 +7,19 @@ import java.util.List;
 /**
  * Created by Gochan on 16.05.2016.
  */
-public class Tree {
-    private Node root;
+public class Dict {
+    private Letter root;
 
-    public Tree(){
-        root = new Node();
+    public Dict(){
+        root = new Letter();
     }
 
-    public Tree(List<String> words){
+    public Dict(List<String> words){
         this();
-        Loader.loadTreeFromCollectionOfWords(this, words);
+        Loader.loadDictFromCollectionOfWords(this, words);
     }
 
-    public Node getRoot() {
+    public Letter getRoot() {
         return root;
     }
 
